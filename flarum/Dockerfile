@@ -19,13 +19,7 @@ VOLUME  ["/var/lib/mysql", "/opt/flarum"]
 
 ### update repository for PHP 5.6
 
-# note: triggers non-fatal error due to non-ASCII characters in repo name
-#       (gpg: key E5267A6C: public key "Launchpad PPA for Ond\xc5\x99ej Sur�" imported)
-
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C \
- && add-apt-repository -y ppa:ondrej/php5-5.6 \
- && apt-key update \
- && apt-get update -qq
+RUN apt-get update
 
 
 ### install base packages and PHP
