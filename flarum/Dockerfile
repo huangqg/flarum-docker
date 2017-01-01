@@ -8,9 +8,10 @@
 # docker-compose run --service-ports flarum <custom command, e.g. /bin/bash>
 
 FROM phusion/baseimage
-MAINTAINER Sebastien Pujadas http://pujadas.net
-ENV REFRESHED_AT 2015-05-12
+MAINTAINER huangqg<huqngqg@tenxcloud.com>
+ENV REFRESHED_AT 2017-01-01
 
+VOLUME  ["/var/lib/mysql", "/opt/flarum"]
 
 ###############################################################################
 #                                     PHP
